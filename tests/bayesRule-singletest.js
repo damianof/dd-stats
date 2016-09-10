@@ -1,16 +1,16 @@
 /*global*/
 'use strict';
 
-let chai = require('chai')
+const chai = require('chai')
 	, expect = chai.expect;
 	
-let BayesRule = require('../lib/BayesRule');
+const BayesRule = require('../lib/BayesRule');
 
 // unit test reference error
-let err = new ReferenceError('This is a bad function.');
+const err = new ReferenceError('This is a bad function.');
 
 // Test 1:
-let params = {
+const params = {
 	  name: 'Test: [love, deal]'
 	, featuresX: new Map()
 	, selectedX: ['love', 'deal']
@@ -36,17 +36,17 @@ let params = {
 	, decimalPlaces: 4 // number of decimal places we round the result to before checking it against expected result
 };
 
-let featuresX = params.featuresX;
+const featuresX = params.featuresX;
 featuresX.set('love', 0.1);
 featuresX.set('deal', 0.8);
 featuresX.set('life', 0.1);
 
-let featuresY = params.featuresY;
+const featuresY = params.featuresY;
 featuresY.set('love', 0.5);
 featuresY.set('deal', 0.2);
 featuresY.set('life', 0.3);
 
-let featuresZ = params.featuresZ;
+const featuresZ = params.featuresZ;
 featuresZ.set('love', 0.1);
 featuresZ.set('deal', 0.1);
 featuresZ.set('life', 0.8);
@@ -61,6 +61,20 @@ describe('BayesRule tests', function() {
 	
 	it('name should be BayesRule', function(done){
 		expect(BayesRule.name).to.equal('BayesRule');
+		done();
+	});
+	
+	it('should throw if attempting to instantiate', function(done){
+		let fn = function () { 
+			try {
+				new BayesRule(); // should throw
+			} catch (e) {
+				console.log('Exception: ', e);
+				throw err;
+			}
+		};
+		
+		expect(fn).to.throw(err);
 		done();
 	});
 	

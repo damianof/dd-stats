@@ -1,7 +1,7 @@
 {
 	"name": "D-Stats",
-	"version": "0.0.1",
-	"description": "Simple statistics funcionality I needed in some of my Node apps",
+	"version": "0.0.2",
+	"description": "Simple statistics funcionality I needed in some of my Node apps for machine learning applications",
 	"author": "Damiano Fusco",
 	"scripts": {
 		"test": "mocha tests",

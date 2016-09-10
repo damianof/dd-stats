@@ -1,17 +1,17 @@
 /*global*/
 'use strict';
 
-let chai = require('chai')
+const chai = require('chai')
 	, expect = chai.expect
 	, mochaTestdata = require('mocha-testdata')
 	, given = mochaTestdata.given;
 	
-let BayesRule = require('../lib/BayesRule');
+const BayesRule = require('../lib/BayesRule');
 
 // unit test reference error
-let err = new ReferenceError('This is a bad function.');
+const err = new ReferenceError('This is a bad function.');
 
-let testData = [
+const testData = [
 	// Test 1 [love, deal]:
 	{
 		name: 'Test: [love, deal]'
@@ -71,12 +71,12 @@ let testData = [
 	}
 ];
 
-let featuresX = testData[0].featuresX;
+const featuresX = testData[0].featuresX;
 featuresX.set('love', 0.1);
 featuresX.set('deal', 0.8);
 featuresX.set('life', 0.1);
 
-let featuresY = testData[0].featuresY;
+const featuresY = testData[0].featuresY;
 featuresY.set('love', 0.5);
 featuresY.set('deal', 0.2);
 featuresY.set('life', 0.3);
@@ -106,12 +106,12 @@ describe('BayesRule tests', function() {
 		console.log('posterior should return valid result');
 			let fn = function () { 
 				try {
-					let result = BayesRule.posterior({
+					const result = BayesRule.posterior({
 						selected: params.selectedX
 						, features: params.featuresX
 					});
 					console.log('posterior result', result);
-					let rounded = Number(result.toFixed(params.decimalPlaces));
+					const rounded = Number(result.toFixed(params.decimalPlaces));
 					expect(rounded).to.equal(params.expectedPosteriorX);
 				} catch (e) {
 					console.log(e);
@@ -123,12 +123,12 @@ describe('BayesRule tests', function() {
 			
 			fn = function () { 
 				try {
-					let result = BayesRule.posterior({
+					const result = BayesRule.posterior({
 						selected: params.selectedY
 						, features: params.featuresY
 					});
 					console.log('posterior result', result);
-					let rounded = Number(result.toFixed(params.decimalPlaces));
+					const rounded = Number(result.toFixed(params.decimalPlaces));
 					expect(rounded).to.equal(params.expectedPosteriorY);
 				} catch (e) {
 					console.log(e);
@@ -141,13 +141,13 @@ describe('BayesRule tests', function() {
 		console.log('joint should return valid result');
 			fn = function () { 
 				try {
-					let result = BayesRule.joint({
+					const result = BayesRule.joint({
 						selected: params.selectedX
 						, features: params.featuresX
 						, prior: params.priorX
 					});
 					console.log('joint result', result);
-					let rounded = Number(result.toFixed(params.decimalPlaces));
+					const rounded = Number(result.toFixed(params.decimalPlaces));
 					expect(rounded).to.equal(params.expectedJointX);
 				} catch (e) {
 					console.log(e);
@@ -158,13 +158,13 @@ describe('BayesRule tests', function() {
 			expect(fn).to.not.throw(err);
 			fn = function () { 
 				try {
-					let result = BayesRule.joint({
+					const result = BayesRule.joint({
 						selected: params.selectedY
 						, features: params.featuresY
 						, prior: params.priorY
 					});
 					console.log('joint result', result);
-					let rounded = Number(result.toFixed(params.decimalPlaces));
+					const rounded = Number(result.toFixed(params.decimalPlaces));
 					expect(rounded).to.equal(params.expectedJointY);
 				} catch (e) {
 					console.log(e);
@@ -177,7 +177,7 @@ describe('BayesRule tests', function() {
 		console.log('calculate should return valid result');
 			fn = function () { 
 				try {
-					let result = BayesRule.calculate({
+					const result = BayesRule.calculate({
 						decimalPlaces: params.decimalPlaces
 						, items: [{
 							name: 'Chris'
@@ -193,15 +193,15 @@ describe('BayesRule tests', function() {
 					});
 					
 					console.log('calculate result', result);
-					let roundedSum = Number(result.checkSum.toFixed(params.decimalPlaces));
+					const roundedSum = Number(result.checkSum.toFixed(params.decimalPlaces));
 					expect(roundedSum).to.equal(1);
 					
-					let chris = result.items.get('Chris');
+					const chris = result.items.get('Chris');
 					console.log('calculate Chris result', chris);
 					expect(chris.joint).to.equal(params.expectedJointX);
 					expect(chris.score).to.equal(params.expectedScoreX);
 					
-					let mary = result.items.get('Mary');
+					const mary = result.items.get('Mary');
 					console.log('calculate Mary result', mary);
 					expect(mary.joint).to.equal(params.expectedJointY);
 					expect(mary.score).to.equal(params.expectedScoreY);

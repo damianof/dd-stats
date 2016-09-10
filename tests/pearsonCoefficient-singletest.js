@@ -1,16 +1,16 @@
 /*global*/
 'use strict';
 
-let chai = require('chai')
+const chai = require('chai')
 	, expect = chai.expect;
 	
-let PearsonCoefficient = require('../lib/PearsonCoefficient');
+const PearsonCoefficient = require('../lib/PearsonCoefficient');
 
 // unit test reference error
-let err = new ReferenceError('This is a bad function.');
+const err = new ReferenceError('This is a bad function.');
 
 // Test 3:
-let params = {
+const params = {
 	name: 'Expect score of 0.8660254038'
 	, x: [1,3,4,4]
 	, y: [2,5,5,8]
@@ -26,6 +26,20 @@ let params = {
 };
 
 describe('PearsonCoefficient tests', function() {
+
+	it('should throw if attempting to instantiate', function(done){
+		let fn = function () { 
+			try {
+				new PearsonCoefficient(); // should throw
+			} catch (e) {
+				console.log('Exception: ', e);
+				throw err;
+			}
+		};
+		
+		expect(fn).to.throw(err);
+		done();
+	});
 
 	// 'should respond' checks
 	it('should respond to static method simpleSum', function(done){
@@ -64,7 +78,7 @@ describe('PearsonCoefficient tests', function() {
 	});
 	
 	it('simpleSum should return valid result', function(done){
-		let fn = function () { 
+		const fn = function () { 
 			try {
 				let resultX = PearsonCoefficient.simpleSum(params.x);
 				let resultY = PearsonCoefficient.simpleSum(params.y);
@@ -82,7 +96,7 @@ describe('PearsonCoefficient tests', function() {
 	});
 	
 	it('squareSum should return valid result', function(done){
-		let fn = function () { 
+		const fn = function () { 
 			try {
 				let resultX = PearsonCoefficient.squareSum(params.x);
 				let resultY = PearsonCoefficient.squareSum(params.y);
@@ -102,7 +116,7 @@ describe('PearsonCoefficient tests', function() {
 	it('sumOfProducts should return valid result', function(done){
 		let fn = function () { 
 			try {
-				let result = PearsonCoefficient.sumOfProducts(params.x, params.y);
+				const result = PearsonCoefficient.sumOfProducts(params.x, params.y);
 				console.log('sumOfProducts result', result);
 				expect(result).to.equal(params.expectedSumOfProducts);
 				done();
@@ -116,9 +130,9 @@ describe('PearsonCoefficient tests', function() {
 	});
 	
 	it('calculateNumerator should return valid result', function(done){
-		let fn = function () { 
+		const fn = function () { 
 			try {
-				let result = PearsonCoefficient.calculateNumerator(
+				const result = PearsonCoefficient.calculateNumerator(
 					params.expectedSumOfProducts
 					, params.expectedSimpleSumX
 					, params.expectedSimpleSumY
@@ -137,9 +151,9 @@ describe('PearsonCoefficient tests', function() {
 	});
 
 	it('calculateDenominator should return valid result', function(done){
-		let fn = function () { 
+		const fn = function () { 
 			try {
-				let result = PearsonCoefficient.calculateDenominator(
+				const result = PearsonCoefficient.calculateDenominator(
 					params.expectedSquareSumX
 					, params.expectedSquareSumY
 					, params.expectedSimpleSumX
@@ -161,10 +175,10 @@ describe('PearsonCoefficient tests', function() {
 	});
 
 	it('calculate should return valid result', function(done){
-		let fn = function () { 
+		const fn = function () { 
 			try {
-				let result = PearsonCoefficient.calculate(params.x, params.y);
-				let rounded = Number(result.toFixed(params.decimalPlaces));
+				const result = PearsonCoefficient.calculate(params.x, params.y);
+				const rounded = Number(result.toFixed(params.decimalPlaces));
 				console.log('calculate result', result);
 				console.log('calculate rounded', rounded);
 				
