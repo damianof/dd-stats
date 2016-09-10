@@ -1,6 +1,6 @@
 # d-stats
 
-[![npm version](https://badge.fury.io/js/D-Stats.svg)](https://badge.fury.io/js/D-Stats)
+[![npm version](https://badge.fury.io/js/D-Stats.svg?1)](https://badge.fury.io/js/D-Stats)
 
 Ultra light-weight logging module for NodeJS (and might even use on client side)
 
@@ -16,3 +16,6 @@ IMPORTANT: This is still very preliminary and not fully tested. Use at your own 
 
 - BayesRule
 - PearsonCoefficient
+
+## To run tests:
+mocha tests
