@@ -1,0 +1,41 @@
+{
+  "env": {
+    "node": true,
+	"es6": true
+  },
+  "rules": {
+    "no-var": 0,
+	"no-shadow": ["error", { "builtinGlobals": false, "hoist": "functions", "allow": [] }],
+    "block-scoped-var": 2,
+    "brace-style": [2, "1tbs"],
+    "camelcase": 2,
+    "curly": 2,
+    "eol-last": 2,
+    "eqeqeq": [2, "smart"],
+    "max-depth": [1, 5],
+    "max-statements": [1, 35],
+    "max-len": [1, 300],
+    "new-cap": ["error", {
+		"capIsNewExceptions": ["CORS","RedisAdapter"]
+	}],
+    "no-extend-native": 2,
+    "no-mixed-spaces-and-tabs": 0,
+    "no-trailing-spaces": 0,
+    "no-use-before-define": [2, "nofunc"],
+    "no-unused-vars": ["error", { 
+		"varsIgnorePattern": "log*" 
+	}],
+    "quotes": [2, "single", "avoid-escape"],
+    "semi": [2, "always"],
+    "keyword-spacing": ["error", {"overrides": {
+        //"if": {"after": false},
+        //"for": {"after": false},
+        //"while": {"after": false}
+    }}],
+    "object-curly-spacing": [2, "never"],
+    "array-bracket-spacing": [2, "never"],
+    "computed-property-spacing": [2, "never"],
+    "space-unary-ops": 2,
+	"quote-props": ["error", "as-needed"]
+  }
+}
