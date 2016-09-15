@@ -9,6 +9,7 @@ Simple stats library with custom classes created to use some well-known formulas
 IMPORTANT: This is still very preliminary and not fully tested. Use at your own risk or perform due diligence to review code and add additional unit tests you feel are necessary.
 
 # @Release Notes
+- 0.0.3 Added ./lib/index.js
 - 0.0.2 Added .gitignore, cleaned up code a bit
 - 0.0.1 Initial commit
 

@@ -6,7 +6,7 @@ const chai = require('chai')
 	, mochaTestdata = require('mocha-testdata')
 	, given = mochaTestdata.given;
 	
-const PearsonCoefficient = require('../lib/PearsonCoefficient');
+const PearsonCoefficient = require('../lib/index').PearsonCoefficient;
 
 // unit test reference error
 const err = new ReferenceError('This is a bad function.');

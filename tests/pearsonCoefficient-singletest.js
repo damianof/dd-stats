@@ -4,7 +4,7 @@
 const chai = require('chai')
 	, expect = chai.expect;
 	
-const PearsonCoefficient = require('../lib/PearsonCoefficient');
+const PearsonCoefficient = require('../lib/index').PearsonCoefficient;
 
 // unit test reference error
 const err = new ReferenceError('This is a bad function.');

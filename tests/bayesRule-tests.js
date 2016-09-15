@@ -6,7 +6,7 @@ const chai = require('chai')
 	, mochaTestdata = require('mocha-testdata')
 	, given = mochaTestdata.given;
 	
-const BayesRule = require('../lib/BayesRule');
+const BayesRule = require('../lib/index').BayesRule;
 
 // unit test reference error
 const err = new ReferenceError('This is a bad function.');

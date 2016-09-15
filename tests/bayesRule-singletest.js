@@ -4,7 +4,7 @@
 const chai = require('chai')
 	, expect = chai.expect;
 	
-const BayesRule = require('../lib/BayesRule');
+const BayesRule = require('../lib/index').BayesRule;
 
 // unit test reference error
 const err = new ReferenceError('This is a bad function.');
