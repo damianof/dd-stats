@@ -1,5 +1,5 @@
 {
-	"name": "dd-stats",
+	"name": "@damianof/dd-stats",
 	"version": "0.0.5",
 	"description": "Simple statistics funcionality I needed in some of my Node apps for machine learning applications",
 	"author": "Damiano Fusco",
