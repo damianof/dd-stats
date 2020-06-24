@@ -1,6 +1,6 @@
-# d-stats
+# dd-stats
 
-[![npm version](https://badge.fury.io/js/D-Stats.svg?1)](https://badge.fury.io/js/D-Stats)
+[![npm version](https://badge.fury.io/js/dd-stats.svg?1)](https://badge.fury.io/js/dd-stats)
 
 Ultra light-weight logging module for NodeJS (and might even use on client side)
 

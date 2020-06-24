@@ -1,6 +1,6 @@
 {
-	"name": "d-stats",
-	"version": "0.0.4",
+	"name": "dd-stats",
+	"version": "0.0.5",
 	"description": "Simple statistics funcionality I needed in some of my Node apps for machine learning applications",
 	"author": "Damiano Fusco",
 	"license": "MIT",
@@ -11,10 +11,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/damianof/d-stats.git"
+		"url": "https://github.com/damianof/dd-stats.git"
 	},
 	"keywords": [
-		"d-stats",
+		"dd-stats",
 		"bayes",
 		"pearson",
 		"machine learning"
@@ -28,7 +28,7 @@
 		"mocha-testdata": "^1.2.0"
 	},
 	"bugs": {
-		"url": "https://github.com/damianof/d-stats/issues"
+		"url": "https://github.com/damianof/dd-stats/issues"
 	},
-	"homepage": "https://github.com/damianof/d-stats"
+	"homepage": "https://github.com/damianof/dd-stats"
 }
