@@ -1,5 +1,5 @@
 {
-	"name": "@damianof/d-stats",
+	"name": "d-stats",
 	"version": "0.0.4",
 	"description": "Simple statistics funcionality I needed in some of my Node apps for machine learning applications",
 	"author": "Damiano Fusco",
@@ -30,8 +30,5 @@
 	"bugs": {
 		"url": "https://github.com/damianof/d-stats/issues"
 	},
-	"homepage": "https://github.com/damianof/d-stats",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	}
+	"homepage": "https://github.com/damianof/d-stats"
 }
