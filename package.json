@@ -30,5 +30,8 @@
 	"bugs": {
 		"url": "https://github.com/damianof/dd-stats/issues"
 	},
-	"homepage": "https://github.com/damianof/dd-stats"
+	"homepage": "https://github.com/damianof/dd-stats",
+	"publishConfig": {
+	  "registry": "https://registry.npmjs.org/"
+	}
 }
