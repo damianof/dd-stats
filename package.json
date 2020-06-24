@@ -1,16 +1,17 @@
 {
-	"name": "D-Stats",
-	"version": "0.0.3",
+	"name": "@damianof/d-stats",
+	"version": "0.0.4",
 	"description": "Simple statistics funcionality I needed in some of my Node apps for machine learning applications",
 	"author": "Damiano Fusco",
+	"license": "MIT",
 	"main": "./lib/index.js",
-  	"scripts": {
+	"scripts": {
 		"test": "mocha tests",
 		"eslint": "eslint -c ./.eslintrc --ignore-path ./.eslintignore ."
 	},
-  	"repository": {
+	"repository": {
 		"type": "git",
-		"url": "https://github.com/damianof/D-Stats.git"
+		"url": "https://github.com/damianof/d-stats.git"
 	},
 	"keywords": [
 		"d-stats",
@@ -25,5 +26,12 @@
 		"chai": "2.1.1",
 		"mocha": "2.2.5",
 		"mocha-testdata": "1.2.0"
+	},
+	"bugs": {
+		"url": "https://github.com/damianof/d-stats/issues"
+	},
+	"homepage": "https://github.com/damianof/d-stats",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
 	}
 }
