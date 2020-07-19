@@ -1,6 +1,6 @@
 {
 	"name": "@damianof/dd-stats",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Simple statistics funcionality I needed in some of my Node apps for machine learning applications",
 	"author": "Damiano Fusco",
 	"license": "MIT",
@@ -24,6 +24,7 @@
 	},
 	"devDependencies": {
 		"chai": "^4.2.0",
+		"lodash": "^4.17.19",
 		"mocha": "^8.0.1",
 		"mocha-testdata": "^1.2.0"
 	},
@@ -32,6 +33,6 @@
 	},
 	"homepage": "https://github.com/damianof/dd-stats",
 	"publishConfig": {
-	  "registry": "https://registry.npmjs.org/"
+		"registry": "https://registry.npmjs.org/"
 	}
 }
